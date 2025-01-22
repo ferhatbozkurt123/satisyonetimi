@@ -1,0 +1,59 @@
+<div class="delete-product-container">
+    <h2>Ürün Sil</h2>
+  
+    <div class="search-bar">
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        placeholder="Ürün Ara..."
+        class="search-input"
+      />
+      <button (click)="searchProducts()" class="btn-search">Ara</button>
+    </div>
+  
+    <div *ngIf="searchProducts().length > 0; else noProducts">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Görsel</th>
+            <th>Ürün Adı</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Kategori</th>
+            <th>Seç</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of searchProducts()">
+            <td><img [src]="product.image" [alt]="product.name" class="product-image" /></td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency:'TRY' }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.category }}</td>
+            <td>
+              <button
+                (click)="selectProduct(product.id)"
+                [class.selected]="product.id === selectedProductId"
+                class="btn-select"
+              >
+                Seç
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <button
+        (click)="deleteSelectedProduct()"
+        [disabled]="!selectedProductId"
+        class="btn-delete"
+      >
+        Sil
+      </button>
+    </div>
+  
+    <ng-template #noProducts>
+      <p>Aradığınız kriterlere uygun ürün bulunamadı.</p>
+    </ng-template>
+  </div>
+  

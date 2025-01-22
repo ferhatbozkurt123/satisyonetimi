@@ -1,0 +1,45 @@
+.button-container {
+    display: flex;
+    flex-direction: column;  /* Butonları dikeyde sıralar */
+    align-items: center;     /* Butonları yatayda ortalar */
+    gap: 20px;               /* Butonlar arasına boşluk ekler */
+    margin-top: 40px;
+  }
+  
+  .big-button {
+    background-color: #4465bd;  /* Ana buton rengi (Yeşil) */
+    color: #fff;                /* Buton yazı rengi */
+    font-size: 16px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;         /* Yuvarlatılmış köşeler */
+    cursor: pointer;
+    transition: all 0.3s ease;  /* Buton üzerindeki geçiş animasyonu */
+    width: 100%;                /* Butonlar tam genişlikte olacak */
+    max-width: 300px;           /* Butonların maksimum genişliği */
+    text-align: center;
+  
+    &:hover {
+      background-color: #45a049; /* Hoverda daha koyu yeşil */
+      transform: scale(1.05);    /* Hoverda buton büyür */
+    }
+  
+    &:active {
+      background-color: #388e3c; /* Tıklama anında daha koyu yeşil */
+      transform: scale(0.98);    /* Buton tıklandığında küçülür */
+    }
+  
+    &:focus {
+      outline: none;            /* Buton odaklandığında sınır çizgisi yok */
+    }
+  
+    /* Küçük ekranlar için butonlar daha da genişler */
+    @media (max-width: 768px) {
+      max-width: 250px;         /* Ekran küçüldükçe butonlar biraz daha küçük */
+    }
+  
+    @media (max-width: 480px) {
+      max-width: 200px;         /* Daha küçük ekranlarda buton genişliği */
+    }
+  }
+  

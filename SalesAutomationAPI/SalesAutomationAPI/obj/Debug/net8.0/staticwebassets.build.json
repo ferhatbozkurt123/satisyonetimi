@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "cnAYJV/xC1HuGPXE3UKQPR54bNGEguty0jq7ZMnZ+Gk=",
+  "Source": "SalesAutomationAPI",
+  "BasePath": "_content/SalesAutomationAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SalesAutomationAPI\\wwwroot",
+      "Source": "SalesAutomationAPI",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\",
+      "BasePath": "_content/SalesAutomationAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\images\\products\\ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg",
+      "SourceId": "SalesAutomationAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\",
+      "BasePath": "_content/SalesAutomationAPI",
+      "RelativePath": "images/products/ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ouni63sgt5",
+      "Integrity": "wET+pRbzUdzoVIpxIXOehgSb1SZdd2qdZl03iIh2rX4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\products\\ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\uploads\\e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png",
+      "SourceId": "SalesAutomationAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\",
+      "BasePath": "_content/SalesAutomationAPI",
+      "RelativePath": "uploads/e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mvfk7j8964",
+      "Integrity": "nh+1e3eQuyrRgFYIhSJiFSUwPnPDUzLrjO4xRq0ud2w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "images/products/ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg",
+      "AssetFile": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\images\\products\\ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wET+pRbzUdzoVIpxIXOehgSb1SZdd2qdZl03iIh2rX4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 23:11:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wET+pRbzUdzoVIpxIXOehgSb1SZdd2qdZl03iIh2rX4="
+        }
+      ]
+    },
+    {
+      "Route": "images/products/ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.ouni63sgt5.jpg",
+      "AssetFile": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\images\\products\\ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8973"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wET+pRbzUdzoVIpxIXOehgSb1SZdd2qdZl03iIh2rX4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 21 Jan 2025 23:11:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ouni63sgt5"
+        },
+        {
+          "Name": "label",
+          "Value": "images/products/ea7e7ecc-5489-46ce-8912-f4e8c9cee5a3_9593775751218.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wET+pRbzUdzoVIpxIXOehgSb1SZdd2qdZl03iIh2rX4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.mvfk7j8964.png",
+      "AssetFile": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\uploads\\e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nh+1e3eQuyrRgFYIhSJiFSUwPnPDUzLrjO4xRq0ud2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Jan 2025 13:29:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mvfk7j8964"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nh+1e3eQuyrRgFYIhSJiFSUwPnPDUzLrjO4xRq0ud2w="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png",
+      "AssetFile": "C:\\Users\\PC\\Desktop\\satışyönetimi\\SalesAutomationAPI\\SalesAutomationAPI\\wwwroot\\uploads\\e8d24491-ef7d-4e0f-b515-b9b2fbd2bd69.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "305309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nh+1e3eQuyrRgFYIhSJiFSUwPnPDUzLrjO4xRq0ud2w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 20 Jan 2025 13:29:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nh+1e3eQuyrRgFYIhSJiFSUwPnPDUzLrjO4xRq0ud2w="
+        }
+      ]
+    }
+  ]
+}

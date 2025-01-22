@@ -1,0 +1,200 @@
+<div class="pos-container">
+    <!-- Sol Taraf - Ürün Kataloğu -->
+    <div class="product-catalog">
+        <!-- Filtre ve Arama Bölümü -->
+        <div class="filters-container">
+            <mat-form-field appearance="outline">
+                <mat-label>Ürün Ara</mat-label>
+                <input matInput (input)="onSearch($event)" [value]="searchTerm" placeholder="Ürün adı ile ara...">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Kategori Filtrele</mat-label>
+                <mat-select (selectionChange)="onCategoryChange($event)" [value]="selectedCategory">
+                    <mat-option [value]="null">Tüm Kategoriler</mat-option>
+                    <mat-option *ngFor="let category of categories" [value]="category.kategoriID">
+                        {{category.kategoriAdi}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+  
+        <!-- Yükleme durumu -->
+        <div *ngIf="loading" class="loading-spinner">
+            <mat-spinner></mat-spinner>  
+        </div>
+  
+        <!-- Hata mesajı -->
+        <div *ngIf="error" class="error-message">
+            {{ error }}
+        </div>   
+  
+        <!-- Ürün listesi -->
+        <div class="products-container">
+            <div class="products-grid">
+                <div class="product-card" *ngFor="let product of filteredProducts">
+                    <img [src]="product.urunGorseli || 'https://dummyimage.com/400x300/e0e0e0/ffffff&text=Görsel+Yok'" 
+                         [alt]="product.urunAdi" 
+                         class="product-image"
+                         (error)="handleImageError($event)">
+                    <div class="product-info">
+                        <h3>{{ product.urunAdi }}</h3>
+                        <p class="description" *ngIf="product.aciklama">{{ product.aciklama }}</p>
+                        <p class="price">₺{{ product.fiyat | number:'1.2-2' }}</p>
+                        <p class="stock">Stok: {{ product.stokMiktari }}</p>
+                        <button (click)="addToCart(product)" 
+                                class="add-to-cart-btn" 
+                                [disabled]="product.stokMiktari <= 0">
+                            {{ product.stokMiktari <= 0 ? 'Stokta Yok' : 'Sepete Ekle' }}
+                        </button>
+                    </div>
+                    <div class="product-actions">
+                        <button mat-icon-button color="primary" (click)="editProduct(product)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="deleteProduct(product.urunID)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Ürün ekleme butonu -->
+        <button mat-fab color="primary" class="add-button" (click)="addProduct()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+  
+    <!-- Sağ Taraf - Sepet -->
+    <div class="cart-section">
+        <div class="cart-header">
+            <h2>Aktif Sepet</h2>
+            <button (click)="openReportPopup()" class="btn-login">RAPORLAR</button>
+            <button (click)="openSalesPopup()" class="btn-login">SATIŞLAR</button>
+            <button (click)="addProduct()" class="btn-login">Ürün Yönetimi</button>
+        </div>
+
+        <app-cart></app-cart>
+    </div>
+  
+    <router-outlet></router-outlet>
+  </div>
+  
+  <style>
+    .filters-container {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding: 16px;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+    }
+
+    .filters-container mat-form-field {
+      flex: 1;
+    }
+
+    .products-container {
+      padding: 16px;
+    }
+
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .error-message {
+      color: red;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-info {
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .product-info h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .description {
+      color: #666;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #2196F3;
+      margin: 8px 0;
+    }
+
+    .stock {
+      color: #666;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .add-to-cart-btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      margin-top: auto;
+    }
+
+    .add-to-cart-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .product-actions {
+      padding: 8px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      border-top: 1px solid #eee;
+    }
+  </style>
+  

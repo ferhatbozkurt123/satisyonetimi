@@ -1,0 +1,38 @@
+/* Sayfa arka planı */
+body {
+    background-color: #ffffff; /* Beyaz arka plan */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Butonları alt alta koyar */
+    align-items: center; /* Butonları yatayda ortalar */
+    gap: 20px; /* Butonlar arasında boşluk bırakır */
+    margin-top: 50px;
+  }
+  
+  .big-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007bff; /* Mavi buton rengi */
+    color: white;
+    font-weight: bold;
+    width: 200px; /* Buton genişliği */
+    transition: background-color 0.3s, transform 0.3s;
+  
+    &:hover {
+      background-color: #0056b3; /* Hover sırasında daha koyu mavi */
+      transform: scale(1.05); /* Hover sırasında butonu büyütür */
+    }
+  
+    &:active {
+      background-color: #004085; /* Tıklandığında daha koyu mavi */
+      transform: scale(1); /* Aktif durumda buton eski boyutuna döner */
+    }
+  }
+  

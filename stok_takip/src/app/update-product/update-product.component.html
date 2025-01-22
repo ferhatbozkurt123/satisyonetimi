@@ -1,0 +1,68 @@
+<div class="update-product-container">
+    <h2>Ürün Güncelle</h2>
+  
+    <div class="search-bar">
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        placeholder="Ürün Ara..."
+        class="search-input"
+      />
+      <button class="btn-search">Ara</button>
+    </div>
+  
+    <div *ngIf="searchProducts().length > 0; else noProducts">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th>Görsel</th>
+            <th>Ürün Adı</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Kategori</th>
+            <th>Seç</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of searchProducts()">
+            <td><img [src]="product.image" [alt]="product.name" class="product-image" /></td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency:'TRY' }}</td>
+            <td>{{ product.stock }}</td>
+            <td>{{ product.category }}</td>
+            <td>
+              <button
+                (click)="selectProduct(product.id)"
+                [class.selected]="selectedProduct?.id === product.id"
+                class="btn-select"
+              >
+                Seç
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <ng-template #noProducts>
+      <p>Aradığınız kriterlere uygun ürün bulunamadı.</p>
+    </ng-template>
+  
+    <div *ngIf="selectedProduct" class="update-form">
+      <h3>{{ selectedProduct.name }} Güncelle</h3>
+      <label>Ürün Adı:</label>
+      <input [(ngModel)]="selectedProduct.name" type="text" />
+  
+      <label>Fiyat:</label>
+      <input [(ngModel)]="selectedProduct.price" type="number" />
+  
+      <label>Stok:</label>
+      <input [(ngModel)]="selectedProduct.stock" type="number" />
+  
+      <label>Kategori:</label>
+      <input [(ngModel)]="selectedProduct.category" type="text" />
+  
+      <button (click)="updateProduct()" class="btn-update">Güncelle</button>
+    </div>
+  </div>
+  

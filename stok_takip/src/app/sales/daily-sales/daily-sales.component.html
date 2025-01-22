@@ -1,0 +1,25 @@
+
+
+<div class="daily-sales">
+  <h1>Günlük Satışlar</h1>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Ürün Adı</th>
+          <th>Adet</th>
+          <th>Fiyat</th>
+          <th>Toplam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sale of sales">
+          <td>{{ sale.productName }}</td>
+          <td>{{ sale.quantity }}</td>
+          <td>{{ sale.price | currency:'TRY':'symbol-narrow':'1.2-2' }}</td>
+          <td>{{ sale.total | currency:'TRY':'symbol-narrow':'1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

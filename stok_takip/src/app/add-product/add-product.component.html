@@ -1,0 +1,24 @@
+<div class="add-product-container">
+    <h2>Yeni Ürün Ekle</h2>
+  
+    <form (ngSubmit)="addProduct()" class="add-product-form">
+      <label for="name">Ürün Adı:</label>
+      <input id="name" [(ngModel)]="newProduct.name" name="name" type="text" placeholder="Ürün adı girin" required />
+  
+      <label for="price">Fiyat:</label>
+      <input id="price" [(ngModel)]="newProduct.price" name="price" type="number" placeholder="Fiyat girin" required />
+  
+      <label for="stock">Stok:</label>
+      <input id="stock" [(ngModel)]="newProduct.stock" name="stock" type="number" placeholder="Stok miktarı girin" required />
+  
+      <label for="category">Kategori:</label>
+      <input id="category" [(ngModel)]="newProduct.category" name="category" type="text" placeholder="Kategori girin" required />
+  
+      <label for="image">Görsel URL:</label>
+      <input id="image" [(ngModel)]="newProduct.image" name="image" type="text" placeholder="Görsel URL girin" />
+  
+      <button type="submit" class="btn-submit">Ürün Ekle</button>
+      <button type="button" (click)="resetForm()" class="btn-reset">Formu Temizle</button>
+    </form>
+  </div>
+  

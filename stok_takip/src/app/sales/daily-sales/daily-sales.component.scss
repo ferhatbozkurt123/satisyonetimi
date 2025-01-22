@@ -1,0 +1,42 @@
+
+// daily-sales.component.scss
+.daily-sales {
+  padding: 20px;
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f5f5f5;
+      font-weight: 600;
+      color: #333;
+    }
+
+    tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    td {
+      color: #666;
+    }
+  }
+}
